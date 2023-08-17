@@ -1,0 +1,16 @@
+@media (max-width: 1199px) {
+    .todoCreateImg {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .todoCreateImg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .todoCreateImg img {
+        width: auto;
+        max-width: 100%;
+    }
+}

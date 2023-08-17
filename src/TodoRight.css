@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+    .todoRight {
+        max-width: 750px;
+        margin: 50px auto 130px;
+        padding: 50px 30px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+@media (min-width: 1200px) {
+    .todoRight {
+        width: 550px;
+        max-width: none;
+        margin: 0;
+    }
+}
+@media (min-width: 1500px) {
+    .todoRight {
+        width: 640px;
+    }
+}

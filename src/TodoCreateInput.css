@@ -1,0 +1,36 @@
+.todoCreateInput {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.todoCreateInput input {
+    transition: 0.3s background-color ease-in-out;
+    margin: 0;
+    padding: 0 15px;
+    border: 0;
+    outline: 0;
+    background-color: var(--white);
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    color: var(--bg-secondary);
+}
+.todoCreateInput input::placeholder {
+    color: var(--bg-secondary);
+}
+
+.todoCreateInput input:hover {
+    background-color: #BDBDBD;
+}
+
+@media (min-width: 768px) {
+    .todoCreateInput {
+        margin-bottom: 50px;
+    }
+    .todoCreateInput input {
+        max-width: 500px;
+    }
+}

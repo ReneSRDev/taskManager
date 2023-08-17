@@ -1,0 +1,53 @@
+.todoHeader {
+    padding: 30px 0 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.todoTitle {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 30px;
+    font-size: 30px;
+    color: var(--bg-secondary);
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+.todoSubTitle {
+    display: block;
+    line-height: 20px;
+    font-size: 20px;
+    color: var(--bg-secondary);
+    letter-spacing: 0.05em;
+}
+.todoSubTitle span {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .todoHeader {
+        padding-top: 0;
+    }
+    .todoTitle {
+        line-height: 40px;
+        font-size: 40px;
+    }
+    .todoSubTitle {
+        line-height: 25px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .todoHeader {
+        margin-bottom: 50px;
+    }
+    .todoTitle {
+        line-height: 60px;
+        font-size: 60px;
+    }
+    .todoSubTitle {
+        line-height: 35px;
+        font-size: 35px;
+    }
+}

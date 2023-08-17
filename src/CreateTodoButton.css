@@ -1,0 +1,42 @@
+.createTodo {
+    transition: 0.3s background-color ease-in-out;
+    border: 0;
+    padding: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: var(--color-primary);
+}
+
+@media (min-width: 1200px) {
+    .createTodo {
+        display: none;
+    }
+}
+
+.createTodo span {
+    transition: 0.3s color ease-in-out;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .createTodo span {
+        font-size: 30px;
+    }
+}
+
+.createTodo:hover {
+    background-color: var(--color-secondary);
+}
+.createTodo:hover span {
+    color: var(--black);
+}
