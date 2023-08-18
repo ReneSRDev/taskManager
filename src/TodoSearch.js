@@ -1,9 +1,18 @@
 import './TodoSearch.css';
 
-function TodoSearch() {
+function TodoSearch({
+        searchValue, 
+        setSearchValue
+    }) {
     return (
         <div className="todoSearch">
-            <input placeholder="Cortar Cebolla" />
+            <input
+                placeholder="Cortar Cebolla"
+                value={searchValue}
+                onChange={(event) => {
+                    setSearchValue(event.target.value);
+                }}
+            />
         </div>
     );
 }
