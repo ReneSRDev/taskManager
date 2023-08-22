@@ -14,7 +14,7 @@
         margin: 0;
     }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
     .todoRight {
         width: 640px;
     }
