@@ -1,0 +1,10 @@
+.todoPrimeraInfo {
+    text-align: center;
+}
+
+.todoPrimeraInfo span {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+}

@@ -1,0 +1,14 @@
+.todoErrorInfo {
+    display: flex;
+    direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoErrorInfo span {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+}
