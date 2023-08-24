@@ -1,8 +1,5 @@
-import { TodoCreate } from '../TodoCreate';
-import { TodoCreateTitle } from '../TodoCreateTitle';
-import { TodoCreateInput } from '../TodoCreateInput';
-import { TodoCreateButton } from '../TodoCreateButton';
-import { TodoCreateImg } from '../TodoCreateImg';
+import React from 'react';
+import { TodoForm } from '../TodoForm';
 import { TodoRight } from '../TodoRight';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
@@ -13,57 +10,59 @@ import { TodoPrimeraInfo } from '../TodoPrimeraInfo';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoContext } from '../TodoContext';
+import { Modal } from '../Modal';
 
 function AppUI() {
+    const {
+        loading,
+        error,
+        totalTodos,
+        searchedTodos,
+        completeTodo,
+        deleteTodo,
+        openModal,
+        setOpenModal
+    } = React.useContext(TodoContext);
+
     return (
         <>
-        <TodoCreate>
-            <TodoCreateTitle />
-            <TodoCreateInput />
-            <TodoCreateButton />
-            <TodoCreateImg />
-        </TodoCreate>
+            <TodoRight>
+                <TodoCounter/>
+                <TodoSearch/>
 
-        <TodoRight>
-            <TodoCounter/>
-            <TodoSearch/>
-
-            <TodoContext.Consumer>
-                {({
-                    loading,
-                    error,
-                    totalTodos,
-                    searchedTodos,
-                    completeTodo,
-                    deleteTodo
-                }) => (
-                    <TodoList>
-                        {loading && 
-                            <>
-                                <TodoLoading />
-                                <TodoLoading />
-                                <TodoLoading />
-                            </>
-                        }
-                        {error && <TodoErrorInfo />}
-                        {(!loading && totalTodos === 0) && <TodoPrimeraInfo />}
-                        
-                        {searchedTodos.map(todo => 
-                        <TodoItem
-                            key={todo.text}
-                            text={todo.text}
-                            completed={todo.completed}
-                            onComplete={() => completeTodo(todo.text)}
-                            onDelete={() => deleteTodo(todo.text)}
-                        />
-                        )}
-                    </TodoList>
-                )}
-            </TodoContext.Consumer>
-
-        </TodoRight>
+                <TodoList>
+                    {loading && 
+                        <>
+                            <TodoLoading />
+                            <TodoLoading />
+                            <TodoLoading />
+                        </>
+                    }
+                    {error && <TodoErrorInfo />}
+                    {(!loading && totalTodos === 0) && <TodoPrimeraInfo />}
+                    
+                    {searchedTodos.map(todo => 
+                    <TodoItem
+                        key={todo.text}
+                        text={todo.text}
+                        completed={todo.completed}
+                        onComplete={() => completeTodo(todo.text)}
+                        onDelete={() => deleteTodo(todo.text)}
+                    />
+                    )}
+                </TodoList>
+            </TodoRight>
     
-        <CreateTodoButton />
+            <CreateTodoButton
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+            />
+
+            {openModal &&
+                <Modal>
+                    <TodoForm />
+                </Modal>
+            }
         </>
     );
 }

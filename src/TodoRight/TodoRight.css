@@ -9,13 +9,8 @@
 }
 @media (min-width: 1200px) {
     .todoRight {
-        width: 550px;
+        width: 100%;
         max-width: none;
         margin: 0;
-    }
-}
-@media (min-width: 1400px) {
-    .todoRight {
-        width: 640px;
     }
 }

@@ -1,0 +1,129 @@
+.todoForm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+    width: 280px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: rgba(70, 70, 70, 0.9);
+}
+
+.todoForm-title {
+    margin-bottom: 20px;
+    line-height: 26px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.todoForm-textArea {
+    transition: 0.3s background-color ease-in-out;
+    margin: 0;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    background-color: var(--white);
+    width: 100%;
+    height: 80px;
+    line-height: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    color: var(--bg-secondary);
+    margin-bottom: 30px;
+    resize: none;
+}
+.todoForm-textArea::placeholder {
+    color: var(--bg-secondary);
+}
+.todoForm-textArea:hover {
+    background-color: #BDBDBD;
+}
+
+.todoForm-button {
+    transition: 0.3s all ease-in-out;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.todoForm-button:hover {
+    background-color: var(--color-secondary);
+    color: var(--black);
+}
+
+@media (min-width: 768px) {
+    .todoForm-container {
+        width: 720px;
+        height: 350px;
+        padding: 0 30px;
+    }
+    .todoForm-title {
+        margin-bottom: 30px;
+        line-height: 36px;
+        font-size: 35px;
+    }
+    .todoForm-textArea {
+        margin-bottom: 50px;
+        max-width: 500px;
+    }
+    .todoForm-button {
+        max-width: 300px;
+    }
+}
+@media (min-width: 992px) {
+    .todoForm-container {
+        width: 750px;
+    }
+}
+@media (min-width: 1200px) {
+    .todoForm-container {
+        width: 100%;
+        height: 100%;
+        padding: 50px 20px;
+        justify-content: flex-start;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .todoForm-title {
+        margin-bottom: 50px;
+        line-height: 50px;
+        font-size: 50px;
+        font-weight: 400;
+        color: var(--bg-secondary);
+    }
+    .todoForm-img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .todoForm-img img {
+        width: auto;
+        max-width: 100%;
+    }
+}
+@media (min-width: 1500px) {
+    .todoForm-title{
+        line-height: 60px;
+        font-size: 60px;
+    }
+}
+@media (max-width: 1199px) {
+    .todoForm-img {
+        display: none;
+    }
+}

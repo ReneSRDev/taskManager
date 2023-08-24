@@ -46,4 +46,22 @@ body {
     display: flex;
     justify-content: space-between;
   }
+
+  #root {
+    order: 1;
+    width: 550px;
+    max-width: none;
+    margin: 0;
+  }
+  #modal {
+    order: 0;
+    width: 540px;
+    min-height: 750px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #root, #modal {
+      width: 640px;
+  }
 }
