@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/taskManager/static/css/main.5274a8b8.css",
+    "main.js": "/taskManager/static/js/main.5e48fffe.js",
+    "static/media/bg-img.jpg": "/taskManager/static/media/bg-img.1323b4a59b8115ca2a04.jpg",
+    "static/media/checkTask.png": "/taskManager/static/media/checkTask.604c5b6e4895e65a60a5.png",
+    "static/media/todoError.png": "/taskManager/static/media/todoError.49efcb722a2873478106.png",
+    "index.html": "/taskManager/index.html",
+    "main.5274a8b8.css.map": "/taskManager/static/css/main.5274a8b8.css.map",
+    "main.5e48fffe.js.map": "/taskManager/static/js/main.5e48fffe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5274a8b8.css",
+    "static/js/main.5e48fffe.js"
+  ]
+}
