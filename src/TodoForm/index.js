@@ -24,7 +24,7 @@ function TodoForm() {
             <label className='todoForm-title'>Añadir una Nueva Tarea</label>
             <textarea
                 className="todoForm-textArea"
-                placeholder="Conquistar el Mundo"
+                placeholder="Escriba una nueva tarea"
                 onChange={onChange}
             />
             <button

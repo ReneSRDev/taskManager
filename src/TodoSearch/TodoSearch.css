@@ -3,7 +3,7 @@
 }
 
 .todoSearch input {
-    transition: 0.3s background-color ease-in-out;
+    transition: 0.3s all ease-in-out;
     margin: 0;
     padding: 0 15px;
     border: 0;
@@ -14,6 +14,7 @@
     border-radius: 10px;
     font-size: 20px;
     letter-spacing: -0.05em;
+    opacity: 0.5;
 }
 .todoSearch input::placeholder {
     color: var(--bg-secondary);
@@ -21,6 +22,7 @@
 
 .todoSearch input:hover {
     background-color: #BDBDBD;
+    opacity: 1;
 }
 
 @media (min-width: 768px) {
